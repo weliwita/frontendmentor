@@ -14,9 +14,16 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap');
 
+    :root{
+      --col-white: hsl(0, 0%, 100%);
+      --col-light-gray: hsl(212, 45%, 89%);
+      --col-grayish-blue: hsl(220, 15%, 55%);
+      --col-dark-blue: hsl(218, 44%, 22%);
+    }
+
     body{
       font-family: 'Outfit', sans-serif;
-      background-color: hsl(212, 45%, 89%);
+      background-color: var(--col-light-gray);
       display: flex; 
       align-items: center; 
       justify-content: center;
@@ -26,10 +33,10 @@
     .card {
       box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
       transition: 0.3s;
-      width: 300px;
       padding: 15px;
       border-radius: 15px;
-      background-color: hsl(0, 0%, 100%);
+      background-color: var(--col-white);
+      max-width: 325px;
     }
 
     .card img {
@@ -46,11 +53,14 @@
     }
 
     .card p {
-      color: hsl(220, 15%, 55%);
+      font-size: 15px;
+      color: var(--col-grayish-blue);
     }
 
-    .card h2 {
-      color: hsl(218, 44%, 22%);
+    .card h1 {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--col-dark-blue);
     }
 
     .container{
